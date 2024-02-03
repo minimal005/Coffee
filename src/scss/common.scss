@@ -1,0 +1,55 @@
+// button
+
+.btn {
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+    padding: toRem(14) toRem(27);
+    border-radius: 24px;
+    transition: all 0.5s;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+        &_yellow {
+            border: 1px solid $bgYellow;
+            background-color: $bgYellow;
+            color: $brownText;
+            box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+            text-decoration: none;
+            @media (any-hover: hover){
+                &:hover{
+                    border: 1px solid $brownText;
+                }
+            }
+        }
+}
+
+.head {
+    color: $mainColor;
+    display: grid;
+    gap: toRem(16);
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 54, 46);
+    }
+    &__text {
+        line-height: 170%;
+        @include adaptiveValue("font-size", 20, 18);
+        & p:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+    &_white {
+        color: white;
+    }
+    &_center {
+        justify-content: center;
+        justify-items: center;
+    }
+    @media (max-width:$mobile){
+        justify-items: start;
+   }
+}
+
+
+
