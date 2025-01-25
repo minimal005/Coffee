@@ -2154,14 +2154,14 @@ summary.footer__title {
 .feedback__button {
   position: absolute;
   bottom: 50%;
-  font-size: 16px;
+  font-size: 20px;
   color: #6c522c;
   background-color: #d8a559;
   border-radius: 16px;
   -webkit-box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
           box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
-  -webkit-transition: font-size 0.3s ease 0s;
-  transition: font-size 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 @media (min-width: 75.625em) {
   .feedback__button {
@@ -2208,18 +2208,19 @@ summary.footer__title {
   }
 }
 .feedback__button:hover {
-  font-size: 20px;
+  border: 1px solid #7b4a20;
 }
 @media (max-width: 47.99875em) {
   .feedback__button {
-    bottom: 10%;
-    width: 1.625rem;
-    height: 1.625rem;
+    bottom: 5%;
+    width: 3.75rem;
+    height: 3.75rem;
     background-color: transparent;
     font-size: 20px;
+    border: 1px solid rgba(249, 192, 106, 0.42);
   }
   .feedback__button:hover {
-    font-size: 22px;
+    border: 1px solid #7b4a20;
   }
 }
 
