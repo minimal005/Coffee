@@ -477,23 +477,25 @@
     bottom: 50%;
     @include adaptiveValue("width", 82, 60);
     @include adaptiveValue("height", 82, 60);
-    font-size: 16px;
+    font-size: 20px;
     color: $brownText;
     background-color: $bgYellow;
     border-radius: 16px;
     box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
-    transition: font-size 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
     &:hover {
-      font-size: 20px;
+      border: 1px solid #7b4a20;
     }
     @media (max-width: $mobile) {
-      bottom: 10%;
-      width: toRem(26);
-      height: toRem(26);
+      bottom: 5%;
+      width: toRem(60);
+      height: toRem(60);
       background-color: transparent;
       font-size: 20px;
+      border: 1px solid rgba(249, 192, 106, 0.42);
+
       &:hover {
-        font-size: 22px;
+        border: 1px solid #7b4a20;
       }
     }
   }
