@@ -1307,8 +1307,8 @@ summary.footer__title {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-6.88%, #1E1E1E), color-stop(87.45%, rgba(0, 0, 0, 0)));
-  background: linear-gradient(90deg, #1E1E1E -6.88%, rgba(0, 0, 0, 0) 87.45%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(-6.88%, #1e1e1e), color-stop(87.45%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(90deg, #1e1e1e -6.88%, rgba(0, 0, 0, 0) 87.45%);
   z-index: 2;
 }
 
@@ -1580,7 +1580,7 @@ summary.footer__title {
   .item-gallery:hover {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    border: 1px solid #7B4A20;
+    border: 1px solid #7b4a20;
   }
 }
 
@@ -1810,7 +1810,8 @@ summary.footer__title {
     transition: all 0.5s;
   }
   .item-advantages:hover {
-    background-color: #d8a559;
+    background-color: transparent;
+    border: 1px solid #7b4a20;
     color: #6c522c;
   }
 }
@@ -2062,7 +2063,7 @@ summary.footer__title {
 }
 .feedback__content {
   border: 1px solid rgba(249, 192, 106, 0.42);
-  background: #FFF9F1;
+  background: #fff9f1;
   position: relative;
 }
 @media (min-width: 75.625em) {
@@ -2159,6 +2160,8 @@ summary.footer__title {
   border-radius: 16px;
   -webkit-box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
           box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+  -webkit-transition: font-size 0.3s ease 0s;
+  transition: font-size 0.3s ease 0s;
 }
 @media (min-width: 75.625em) {
   .feedback__button {
@@ -2204,13 +2207,19 @@ summary.footer__title {
     height: 3.75rem;
   }
 }
+.feedback__button:hover {
+  font-size: 20px;
+}
 @media (max-width: 47.99875em) {
   .feedback__button {
     bottom: 10%;
     width: 1.625rem;
     height: 1.625rem;
     background-color: transparent;
-    font-size: 26px;
+    font-size: 20px;
+  }
+  .feedback__button:hover {
+    font-size: 22px;
   }
 }
 
@@ -2545,7 +2554,7 @@ summary.footer__title {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   height: 100% !important;
-  background: #FFF9F1;
+  background: #fff9f1;
   padding-left: 1.625rem;
   padding-right: 10rem;
 }
