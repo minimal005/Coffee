@@ -1,152 +1,152 @@
 .header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 50;
-    color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  color: white;
 
-    &__content {
-        display: grid;
-        grid-template-columns: 210px 1fr 210px auto;
-        @include adaptiveValue("padding-top", 20, 10);
-        @include adaptiveValue("padding-bottom", 20, 10);
-        font-size: 14px;
-        text-transform: capitalize;
-        @media (max-width:$mobileSmall){
-             display: flex;
-             justify-content: space-between; 
-        }
+  &__content {
+    display: grid;
+    grid-template-columns: 210px 1fr 210px auto;
+    @include adaptiveValue("padding-top", 20, 10);
+    @include adaptiveValue("padding-bottom", 20, 10);
+    font-size: 14px;
+    text-transform: capitalize;
+    @media (max-width: $mobileSmall) {
+      display: flex;
+      justify-content: space-between;
     }
-    &__logo {
-        font-family: 'Clicker Script';
-        font-size: 35px;
-        position: relative;
-        z-index: 5;
-        display: flex;
-        align-items: center;
+  }
+  &__logo {
+    font-family: "Clicker Script";
+    font-size: 35px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+  }
+  &__sign {
+    font-size: 14px;
+    position: relative;
+    z-index: 5;
+    &:hover {
+      opacity: 0.7;
     }
-    &__sign {
-        font-size: 14px;
+  }
+  &__burger {
+    display: flex;
+    align-items: center;
+  }
+  &._header-scroll {
+    transition: opacity 0.8s ease-in-out;
+    position: fixed;
+    opacity: 0;
+    background-color: #0000009d;
+    .header__content {
+      padding-top: toRem(10);
+      padding-bottom: toRem(10);
     }
-    &__burger {
-        display: flex;
-        align-items: center;
+    &._header-show {
+      opacity: 1;
     }
-    &._header-scroll{
-        transition: opacity 0.8s ease-in-out;
-        position: fixed;
-        opacity: 0;
-        background-color: #0000009d;
-        .header__content{
-            padding-top: toRem(10);
-            padding-bottom: toRem(10);
-        }
-        &._header-show{
-            opacity: 1;
-            
-    }
-    }
-    
+  }
 }
 
 .menu {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+
+  &__body {
+  }
+
+  &__list {
     display: flex;
-    justify-self: center;
+    @include adaptiveValue("column-gap", 60, 10);
+    row-gap: toRem(7);
     align-items: center;
-    
-    &__body {
-       
-    }
+    justify-content: center;
+    font-weight: 500;
+    flex-wrap: wrap;
+    font-size: toRem(18);
 
-    &__list {
+    @media (max-width: calc($mobile + 150px)) {
+      padding-bottom: toRem(20);
+      padding-top: 30%;
+      padding-right: toRem(30);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: toRem(24);
+      gap: toRem(30);
+    }
+  }
+  &__item {
+    transition: opacity 0.5s;
+    position: relative;
+    line-height: 140%;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1.5px;
+      bottom: -3px;
+      right: 0;
+      background-color: #fff;
+      overflow: hidden;
+      transition: opacity 0.3s;
+      opacity: 0;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        transition: opacity 0.5s;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__link {
+    transition: opacity 0.3s ease 0s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .icon-menu {
+  }
+}
+.menu-open {
+  .menu__body {
+    @media (max-width: $mobileSmall) {
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+    &__content {
+      @media (max-width: $mobile) {
         display: flex;
-        @include adaptiveValue("column-gap", 60, 10);
-        row-gap: toRem(7);
-        align-items: center;
-        justify-content: center;
-        font-weight: 500;
-        flex-wrap: wrap;
-        
-        @media (max-width:$mobile){
-            padding-bottom: toRem(20);
-            padding-top: toRem(50);
-            padding-right: toRem(30);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            font-size: toRem(24);
-            gap: toRem(30);  
-        }
-        
+        justify-content: space-between;
+      }
     }
-    &__item {
-       transition: opacity 0.5s;
-       position: relative;
-       line-height: 140%;
-       &::after{
-                content:'';
-                position: absolute;
-                width: 100%;
-                height: 1.5px;
-                bottom: -3px;
-                right: 0;
-                background-color: #fff;
-                overflow: hidden;
-                transition: opacity 0.3s;
-                opacity: 0;
-            }
-       @media (any-hover: hover){
-            &:hover{
-                transition: opacity 0.5s;
-                &::after{
-                    opacity: 1;
-                }
-            }
-        }
-        
+  }
+  .menu__list {
+    justify-content: start;
+  }
+  .header {
+    &__signs {
+      @media (max-width: $mobileSmall) {
+        margin-top: toRem(10);
+        justify-self: end;
+      }
     }
-
-    &__link {
-         
+    &__sign {
+      @media (max-width: $mobileSmall) {
+        font-size: 16px;
+      }
     }
-    .icon-menu {
-
-        
-    }
+  }
+  .btn_yellow {
+    box-shadow: none;
+  }
 }
-.menu-open{
-    .menu__body{
-        @media (max-width:$mobileSmall){
-             display: grid;
-             grid-template-rows: 1fr auto;    
-        }
-        &__content{
-            @media (max-width:$mobile){
-                display: flex;
-                justify-content: space-between;
-          }
-        }
-    }
-    .menu__list {
-            justify-content: start;
-        }
-    .header{
-        &__signs {
-            @media (max-width:$mobileSmall){
-                margin-top: toRem(10);
-                justify-self: end;
-            }
-        }
-        &__sign {
-            @media (max-width:$mobileSmall){
-                font-size: 16px;
-            }
-        }
-    }
-    .btn_yellow{
-        box-shadow: none;
-    }
-   
-}
-
