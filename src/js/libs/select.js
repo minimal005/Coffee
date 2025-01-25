@@ -3,48 +3,7 @@ import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../files/func
 import { flsModules } from "../files/modules.js";
 import { formValidate } from "../files/forms/forms.js";
 
-// Підключення файлу стилів
-// Базові стилі полягають у src/scss/forms.scss
-// Файл базових стилів src/scss/forms/select.scss
 
-/*
-Документація:
-Сніппет (HTML): sel
-*/
-/*
-// Налаштування
-Для селекту (select):
-class="ім'я класу" - модифікатор до конкретного селекту
-multiple - мультивибір
-data-class-modif= "ім'я модифікатора"
-data-tags - режим тегів, тільки для (тільки для multiple)
-data-scroll - увімкнути прокручування для списку, що випадає, додатково можна підключити кастомний скролл simplebar в app.js. Зазначене число для атрибуту обмежить висоту
-data-checkbox - стилізація елементів по checkbox (тільки для multiple)
-data-show-selected - вимикає приховування вибраного елемента
-data-search - дозволяє шукати по списку, що випадає
-data-open - селект відкритий відразу
-data-submit - відправляє форму при зміні селекту
-
-data-one-select - селекти всередині оболонки з атрибутом показуватимуться лише по одному
-data-pseudo-label - додає псевдоелемент до заголовка селекту із зазначеним текстом
-
-Для плейсхолдера (Плейсхолдер – це option з value=""):
-data-label для плейсхолдера, додає label до селекту
-data-show для плейсхолдера, показує його у списку (тільки для одиничного вибору)
-
-Для елемента (option):
-data-class="ім'я класу" - додає клас
-data-asset="шлях до картинки або текст" - додає структуру 2х колонок та даними
-data-href="адреса посилання" - додає посилання в елемент списку
-data-href-blank - відкриє посилання у новому вікні
-*/
-
-/*
-// Можливі доопрацювання:
-попап на мобілці
-*/
-
-// Клас побудови Select
 class SelectConstructor {
 	constructor(props, data = null) {
 		let defaultConfig = {
