@@ -121,7 +121,7 @@
       position: absolute;
       z-index: -1;
       background: url("@img/decor.png") no-repeat;
-      transform: rotateY(180deg);
+      transform: rotateY(1git clone 80deg);
       top: -240px;
       left: -10px;
       @include adaptiveValue("width", 500, 300);
